@@ -25,7 +25,18 @@ Welcome to the Keyspace Mission Control! Today we'll explore six essential Valke
 - Medium understanding of data structures
 
 ### Practice on flight simulator before going on hyperdrive
-Visit [Try Valkey](https://valkey.io/try-valkey/), download the emulator and wait for a few seconds while power routes to the engine.
+
+Visit [Try Valkey](https://valkey.io/try-valkey/)
+![try-valkey-01](static/img/try-valkey-01.png)
+
+Download the emulator and wait for a few seconds while we redirect power to the Valkey engine.
+![try-valkey-02](static/img/try-valkey-02.png)
+
+Type any key and you shall see the glorious `valkey-cli` console.
+![try-valkey-03](static/img/try-valkey-03.png)
+
+
+## Complete the missions to become a Valkey Space Captain!
 
 - [Mission 1: Hyperdrive Caching with Strings](docs/mission01.md)
 - [Mission 2: Cantina Session Management with Hashes](docs/mission02.md)
