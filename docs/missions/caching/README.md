@@ -73,9 +73,8 @@ SET imperial_fleet:hoth "1 Super Star Destroyer, 6 Star Destroyers" EX 600
 ```
 
 Response:
-```bash
-OK
-```
+> OK
+
 
 Cache multiple systems 📋
 
@@ -84,7 +83,7 @@ SET imperial_fleet:endor "Shield generator station, 2 Star Destroyers" PX 300
 ```
 
 Response:
-```bash
+```
 OK
 ```
 
@@ -94,7 +93,7 @@ GET imperial_fleet:tatooine
 ```
 
 Response:
-```bash
+```
 "3 Star Destroyers, sector 7G"
 ```
 
@@ -105,7 +104,7 @@ GET imperial_fleet:hoth
 ```
 
 Response:
-```bash
+```
 "1 Super Star Destroyer, 6 Star Destroyers"
 ```
 
@@ -116,9 +115,7 @@ GET imperial_fleet:endor
 ```
 
 Response:
-```bash
-(nil)
-```
+> ```(nil)```
 
 What happened with Endor's data? Why did we get (nil)?
 
@@ -128,9 +125,9 @@ TTL imperial_fleet:tatooine
 ```
 
 Response:
-```bash
-(integer) -2
-```
+> ```bash
+> (integer) -2
+> ```
 
 If you get a response `(integer) -2` means the `TTL` has expired, note the `PX` parameter in the `SET` command (this means _300 milliseconds_), by the time we try to read the data has already been expired from memory.
 
