@@ -1,7 +1,13 @@
 # Valkey Keyspace Workshop: A Galactic Guide to Common Use Cases
-*"In space, no one can hear you cache... but everyone can see your performance improvements!"*
+
+![Valkey-Logo](static/img/valkey-horizontal-color-light.png)
+
+![Keyspace](static/img/keyspace-backdrop.png)
+
+"In space, no one can hear you cache... but everyone can see your performance improvements!"
 
 ## Workshop Overview
+
 **Duration:** 90 minutes  
 **Theme:** Space exploration with Valkey as your hyperdrive  
 **Audience:** Developers ready to boldly go where no cache has gone before  
@@ -9,7 +15,8 @@
 
 ---
 
-## Mission Briefing (5 minutes)
+## Mission Briefing (2 minutes)
+
 *"Space: the final frontier. These are the voyages of the starship Valkey..."*
 
 Welcome to the Keyspace Mission Control! Today we'll explore six essential Valkey use cases that will give your applications the power of a thousand suns. Whether you're building the next USS Enterprise or protecting the galaxy like the Guardians, Valkey has the data structures you need.
@@ -24,29 +31,9 @@ Welcome to the Keyspace Mission Control! Today we'll explore six essential Valke
 - Basic understanding of key/value concepts
 - Medium understanding of data structures
 
-### Practice on flight simulator before going on hyperdrive
+----
 
-Visit [Try Valkey](https://valkey.io/try-valkey/)
-![try-valkey-01](static/img/try-valkey-01.png)
+## [Start with HERE your training young Padawan](docs/training.md)
 
-Download the emulator and wait for a few seconds while we redirect power to the Valkey engine.
-![try-valkey-02](static/img/try-valkey-02.png)
-
-Type any key and you shall see the glorious `valkey-cli` console.
-![try-valkey-03](static/img/try-valkey-03.png)
-
-
-## Complete the missions to become a Valkey Space Captain!
-
-- [Mission 1: Hyperdrive Caching with Strings](docs/mission01.md)
-- [Mission 2: Cantina Session Management with Hashes](docs/mission02.md)
-- [Mission 3: Galactic Task Queues with Lists](docs/mission03.md)
-- [Mission 4: Death Star Leaderboards with Sorted Sets](docs/mission04.md)
-- [Mission 5: Hyperdrive Rate Limiters with Lua Scripts](docs/mission05.md)
-- [Mission 6: Real-time Battle Analytics](docs/mission06.md)
-
----
-
-*"May the Cache be with you, always."*
-
-**Questions? The Force is strong with our Q&A session!**
+### Authors
+Roberto Luna Rojas, Sr Developer Advocate for Valkey
