@@ -1,22 +1,24 @@
-[Valkey Keyspace Workshop: A Galactic Guide to Common Use Cases](../README.md)
+[Previous](../README.md) | [Homepage](../README.md) | [Valkey Keyspace Workshop: A Galactic Guide to Common Use Cases](../README.md)
 
 ![Keyspace](../static/img/keyspace-backdrop.png)
 
-# Practice on the flight simulator before going on hyperdrive
+# Practice on the flight simulator before going on hyperdrive (2 minutes)
 
-Visit [Try Valkey](https://valkey.io/try-valkey/)
+For this workshop you do not need to install Valkey locally (although you are welcome to do so), instead you will be using an emulator running on your browser.
+
+__Step 1__: Visit [Try Valkey](https://valkey.io/try-valkey/)
 
 ![try-valkey-01](../static/img/try-valkey-01.png)
 
-Download the emulator and wait for a few seconds while we redirect power to the Valkey engine.
+__Step 2__: Download Valkey by clicking on _Load Emulator_ button and wait for a few seconds while we redirect power to the Valkey engine.
 
 ![try-valkey-02](../static/img/try-valkey-02.png)
 
-Type any key and you shall see the glorious `valkey-cli` console.
+__Step 3__: Type any key and you shall see the glorious `valkey-cli` console.
 
 ![try-valkey-03](../static/img/try-valkey-03.png)
 
-If you see a prompt with `127.0.0.1:6379` then you are ready to move forward. 
+If you see a prompt with `127.0.0.1:6379` then you are ready to move forward. If you do not, ask one of workshop trainers for help.
 
 > For your convenience we have split commands and responses and will have a clipboard icon 📋 every time you need to copy from this tutorial and paste into the browser.
 

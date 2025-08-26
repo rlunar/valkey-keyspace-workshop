@@ -1,7 +1,8 @@
+[Previous](../docs/training.md) | [Homepage](../README.md) | [Valkey Keyspace Workshop: A Galactic Guide to Common Use Cases](../README.md)
 
+![Keyspace](../static/img/keyspace-backdrop.png)
 
-
-## Complete the missions to become a Valkey Space Captain!
+# Complete the missions to become a Valkey Space Captain!
 
 - [Mission 1: Hyperdrive Caching with Strings](docs/mission01.md)
 - [Mission 2: Cantina Session Management with Hashes](docs/mission02.md)
