@@ -73,7 +73,7 @@ SET imperial_fleet:endor "Shield generator station, 2 Star Destroyers" PX 300
 ```
 
 Response:
-> ```OK```
+> OK
 
 Retrieve all fleet data 📋
 ```bash
@@ -81,7 +81,7 @@ GET imperial_fleet:tatooine
 ```
 
 Response:
-> ```"3 Star Destroyers, sector 7G"```
+> "3 Star Destroyers, sector 7G"
 
 Retrieve all fleet data 📋
 
@@ -99,9 +99,7 @@ GET imperial_fleet:endor
 ```
 
 Response:
-> ```
 > (nil)
-> ```
 
 What happened with Endor's data? Why did we get (nil)?
 
@@ -111,9 +109,7 @@ TTL imperial_fleet:tatooine
 ```
 
 Response:
-> ```bash
 > (integer) -2
-> ```
 
 If you get a response `(integer) -2` means the `TTL` has expired, note the `PX` parameter in the `SET` command (this means _300 milliseconds_), by the time we try to read the data has already been expired from memory.
 
