@@ -22,53 +22,122 @@ Caching is like having R2-D2's memory banks storing frequently accessed informat
 
 ![Distributed-caching](../../../static/img/caching_01-distributed-caching.png)
 
-A distributed cache helps applications to improve performance and reliability by offloading requests for frequently access data from the source of truth to a low latency and high performance system designed for this purpose.
+> A distributed cache helps applications to improve performance and reliability by offloading requests for frequently access data from the source of truth to a low latency and high performance system designed for this purpose.
 
 ### The Challenge
 The Rebel Alliance needs to cache Imperial fleet positions across multiple star systems. Every millisecond counts when outrunning TIE fighters!
 
 ### Solution: Use Valkey Strings Luke
 
-Store data (plain string) using the [SET](https://valkey.io/commands/set/) command providing a Key `imperial_fleet:tatooine` and the Value `3 Star Destroyers, sector 7G` as well as the expiration in seconds (300) using the `EX` optional parameter 📋
+Store data (plain string) using the [SET](https://valkey.io/commands/set/) command providing a Key `imperial_fleet:tatooine` and the Value `3 Star Destroyers, sector 7G` as well as the expiration in seconds (300) using the `EX` optional parameter.
+
+Cache fleet positions with expiration (TTL in seconds) 📋
 
 ```bash
-# Cache fleet positions with expiration (TTL in seconds)
 SET imperial_fleet:tatooine "3 Star Destroyers, sector 7G" EX 300
 ```
 
+Response:
+
 ```bash
-# Retrieve cached data faster than R2-D2 accessing Death Star plans
+OK
+```
+
+Retrieve cached data faster than R2-D2 accessing Death Star plans 📋
+
+```bash
 GET imperial_fleet:tatooine
 ```
 
+Response:
+
 ```bash
-# Check remaining TTL
+"3 Star Destroyers, sector 7G"
+```
+
+Check remaining TTL (Time To Live) 📋
+
+```bash
 TTL imperial_fleet:tatooine
 ```
 
+Response (may differ from you):
+
 ```bash
-# Cache multiple systems
+(integer) 290
+```
+
+Cache multiple systems 📋
+```bash
 SET imperial_fleet:hoth "1 Super Star Destroyer, 6 Star Destroyers" EX 600
+```
+
+Response:
+```bash
+OK
+```
+
+Cache multiple systems 📋
+
+```bash
 SET imperial_fleet:endor "Shield generator station, 2 Star Destroyers" PX 300
 ```
+
+Response:
 ```bash
-# Retrieve all fleet data
+OK
+```
+
+Retrieve all fleet data 📋
+```bash
 GET imperial_fleet:tatooine
+```
+
+Response:
+```bash
+"3 Star Destroyers, sector 7G"
+```
+
+Retrieve all fleet data 📋
+
+```bash
 GET imperial_fleet:hoth  
+```
+
+Response:
+```bash
+"1 Super Star Destroyer, 6 Star Destroyers"
+```
+
+Retrieve all fleet data 📋
+
+```bash
 GET imperial_fleet:endor
 ```
 
+Response:
 ```bash
-# What happened with Endor's data? Why did we get (nil)?
+(nil)
+```
+
+What happened with Endor's data? Why did we get (nil)?
+
+Let's check the TTL 
+```bash
 TTL imperial_fleet:tatooine
 ```
 
-If you get a response (integer) -2 means the TTL has expired, note the PX parameter in the SET command (this means 300 milliseconds), by the time we try to read the data has already been expired from memory.
+Response:
+```bash
+(integer) -2
+```
 
-Beware of the duration of items in the Cache, sometimes you do want to evict them in less than a second, sometimes less than 1 minute, 1 hour or maybe exactly at midnight, for this you can specify TTL 
+If you get a response `(integer) -2` means the `TTL` has expired, note the `PX` parameter in the `SET` command (this means _300 milliseconds_), by the time we try to read the data has already been expired from memory.
 
----
+Beware of the duration of items in the Cache, sometimes you do want to evict them in less than a second, sometimes less than 1 minute, 1 hour or maybe exactly at midnight, for this you can specify TTL using the [EXPIRE](https://valkey.io/commands/expire/) or [EXPIREAT](https://valkey.io/commands/expireat/) command.
+
+## [Explore Common Caching Patterns](../caching/deep-dive.md)
 
 Attributions:
 
-Images in this section are from [A Guide to Top Caching Strategies](https://blog.bytebytego.com/p/a-guide-to-top-caching-strategies)
+Images in this section are from the blog post [A Guide to Top Caching Strategies](https://blog.bytebytego.com/p/a-guide-to-top-caching-strategies) by ByteByteGo.
