@@ -38,10 +38,7 @@ SET imperial_fleet:tatooine "3 Star Destroyers, sector 7G" EX 300
 ```
 
 Response:
-
-```bash
-OK
-```
+> OK
 
 Retrieve cached data faster than R2-D2 accessing Death Star plans 📋
 
@@ -50,10 +47,7 @@ GET imperial_fleet:tatooine
 ```
 
 Response:
-
-```bash
-"3 Star Destroyers, sector 7G"
-```
+> "3 Star Destroyers, sector 7G"
 
 Check remaining TTL (Time To Live) 📋
 
@@ -62,10 +56,7 @@ TTL imperial_fleet:tatooine
 ```
 
 Response (may differ from you):
-
-```bash
-(integer) 290
-```
+> (integer) 290
 
 Cache multiple systems 📋
 ```bash
@@ -75,7 +66,6 @@ SET imperial_fleet:hoth "1 Super Star Destroyer, 6 Star Destroyers" EX 600
 Response:
 > OK
 
-
 Cache multiple systems 📋
 
 ```bash
@@ -83,9 +73,7 @@ SET imperial_fleet:endor "Shield generator station, 2 Star Destroyers" PX 300
 ```
 
 Response:
-```
-OK
-```
+> ```OK```
 
 Retrieve all fleet data 📋
 ```bash
@@ -93,9 +81,7 @@ GET imperial_fleet:tatooine
 ```
 
 Response:
-```
-"3 Star Destroyers, sector 7G"
-```
+> ```"3 Star Destroyers, sector 7G"```
 
 Retrieve all fleet data 📋
 
@@ -104,9 +90,7 @@ GET imperial_fleet:hoth
 ```
 
 Response:
-```
-"1 Super Star Destroyer, 6 Star Destroyers"
-```
+> "1 Super Star Destroyer, 6 Star Destroyers"
 
 Retrieve all fleet data 📋
 
@@ -115,7 +99,9 @@ GET imperial_fleet:endor
 ```
 
 Response:
-> ```(nil)```
+> ```
+> (nil)
+> ```
 
 What happened with Endor's data? Why did we get (nil)?
 
