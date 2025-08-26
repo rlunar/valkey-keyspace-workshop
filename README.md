@@ -36,4 +36,4 @@ Welcome to the Keyspace Mission Control! Today we'll explore six essential Valke
 ## [Start with HERE your training young Padawan](docs/training.md)
 
 ### Authors
-Roberto Luna Rojas | [rlunar](https://github.com/rlunar) | Sr Developer Advocate for Valkey
+Roberto Luna-Rojas | [rlunar](https://github.com/rlunar) | Sr Developer Advocate for Valkey

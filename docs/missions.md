@@ -2,14 +2,14 @@
 
 ![Keyspace](../static/img/keyspace-backdrop.png)
 
-# Complete the missions to become a Valkey Space Captain!
+# Complete ALL the missions to become a Valkey Space Captain!
 
-- [Mission 1: Hyperdrive Caching with Strings](docs/mission01.md)
-- [Mission 2: Cantina Session Management with Hashes](docs/mission02.md)
-- [Mission 3: Galactic Task Queues with Lists](docs/mission03.md)
-- [Mission 4: Death Star Leaderboards with Sorted Sets](docs/mission04.md)
-- [Mission 5: Hyperdrive Rate Limiters with Lua Scripts](docs/mission05.md)
-- [Mission 6: Real-time Battle Analytics](docs/mission06.md)
+- [Mission 1: Hyperdrive Caching with Valkey Strings](../docs/missions/caching/README.md)
+- [Mission 2: Cantina Session Management with Hashes](../docs/mission02.md)
+- [Mission 3: Galactic Task Queues with Lists](../docs/mission03.md)
+- [Mission 4: Death Star Leaderboards with Sorted Sets](../docs/mission04.md)
+- [Mission 5: Hyperdrive Rate Limiters with Lua Scripts](../docs/mission05.md)
+- [Mission 6: Real-time Battle Analytics](../docs/mission06.md)
 
 ---
 
