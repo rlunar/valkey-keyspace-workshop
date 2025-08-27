@@ -10,7 +10,34 @@ __Mission 1️⃣: Hyperdrive Caching with Strings__
 
 *"Your lack of cache invalidation disturbs me" - Vader*
 
-Objective: Use pattern matching to clear all Imperial fleet caches at once
+Objective: Use pattern matching to clear all Imperial fleet caches at once.
+
+__SetUp__
+
+```bash
+SET imperial_fleet:tatooine "3 Star Destroyers, sector 7G"
+```
+
+Response:
+> OK
+
+Cache multiple systems 📋
+
+```bash
+SET imperial_fleet:hoth "1 Super Star Destroyer, 6 Star Destroyers"
+```
+
+Response:
+> OK
+
+Cache multiple systems 📋
+
+```bash
+SET imperial_fleet:endor "Shield generator station, 2 Star Destroyers"
+```
+
+Response:
+> OK
 
 Validation: All following commands should return `(nil)`:
 
