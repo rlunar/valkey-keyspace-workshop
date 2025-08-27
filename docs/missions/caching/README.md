@@ -1,4 +1,4 @@
-[Previous](../docs/missions.md) | [Homepage](../README.md) | [Valkey Keyspace Workshop: A Galactic Guide to Common Use Cases](../README.md)
+[Previous](../docs/missions.md) | [Homepage](../../../README.md) | [Valkey Keyspace Workshop: A Galactic Guide to Common Use Cases](../../../README.md)
 
 ![Keyspace](../../../static/img/keyspace-backdrop.png)
 
@@ -27,7 +27,7 @@ Caching is like having R2-D2's memory banks storing frequently accessed informat
 ### The Challenge
 The Rebel Alliance needs to cache Imperial fleet positions across multiple star systems. Every millisecond counts when outrunning TIE fighters!
 
-### Solution: Use Valkey Strings Luke
+### Solution: Use [Valkey Strings](https://valkey.io/commands/#string) Luke
 
 Store data (plain string) using the [SET](https://valkey.io/commands/set/) command providing a Key `imperial_fleet:tatooine` and the Value `3 Star Destroyers, sector 7G` as well as the expiration in seconds (300) using the `EX` optional parameter.
 
@@ -59,6 +59,7 @@ Response (may differ from you):
 > (integer) 290
 
 Cache multiple systems 📋
+
 ```bash
 SET imperial_fleet:hoth "1 Super Star Destroyer, 6 Star Destroyers" EX 600
 ```

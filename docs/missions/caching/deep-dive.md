@@ -1,4 +1,4 @@
-[Previous](../caching/README.md) | [Homepage](../README.md) | [Valkey Keyspace Workshop: A Galactic Guide to Common Use Cases](../README.md)
+[Previous](../caching/README.md) | [Homepage](../../../README.md) | [Valkey Keyspace Workshop: A Galactic Guide to Common Use Cases](../../../README.md)
 
 ![Keyspace](../../../static/img/keyspace-backdrop.png)
 

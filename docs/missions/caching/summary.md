@@ -1,8 +1,8 @@
-[Previous](../docs/missions.md) | [Homepage](../README.md) | [Valkey Keyspace Workshop: A Galactic Guide to Common Use Cases](../README.md)
+[Previous](../caching/challenge.md) | [Homepage](../../../README.md) | [Valkey Keyspace Workshop: A Galactic Guide to Common Use Cases](../../../README.md)
 
-![Keyspace](../static/img/keyspace-backdrop.png)
+![Keyspace](../../../static/img/keyspace-backdrop.png)
 
-[Mission 1: Hyperdrive Caching with Strings](../caching/README.md)
+__Mission 1️⃣: Hyperdrive Caching with Strings__
 
 # 🎯 Cache Strategy Selection Guide
 
@@ -25,3 +25,5 @@
 - Predictable access patterns (popular content, dashboards)
 - Zero tolerance for cache misses
 - Can invest in complex cache management
+
+## ➡️ Next: [Mission 2️⃣: Cantina Session Management with Hashes](../docs/mission02.md)

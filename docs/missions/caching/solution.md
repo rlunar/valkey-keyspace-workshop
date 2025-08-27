@@ -1,10 +1,10 @@
-[Previous](../caching/deep-dive.md) | [Homepage](../README.md) | [Valkey Keyspace Workshop: A Galactic Guide to Common Use Cases](../README.md)
+[Previous](../caching/challenge.md) | [Homepage](../../../README.md) | [Valkey Keyspace Workshop: A Galactic Guide to Common Use Cases](../../../README.md)
 
 ![Keyspace](../../../static/img/keyspace-backdrop.png)
 
 __Mission 1️⃣: Hyperdrive Caching with Strings__
 
-# 🚀 Bonus Challenges Solutions
+# 🚀 Bonus Challenges [Optional]
 
 ## **Challenge 1: Cache Invalidation Pattern**
 
@@ -12,17 +12,38 @@ __Mission 1️⃣: Hyperdrive Caching with Strings__
 
 Objective: Use pattern matching to clear all Imperial fleet caches at once
 
-Hint Commands: [`SCAN`](https://valkey.io/commands/scan/), [`UNLINK`](https://valkey.io/commands/unlink/)
+Validation: All following commands should return `(nil)`:
 
 ```bash
-SCAN
+GET imperial_fleet:tatooine
 ```
+
+```bash
+GET imperial_fleet:hoth
+```
+
+```bash
+GET imperial_fleet:endor
+```
+
+Hint Commands: [`SCAN`](https://valkey.io/commands/scan/), [`UNLINK`](https://valkey.io/commands/unlink/)
 
 ## **Challenge 2: Atomic Updates**
 
 *"I find your race condition disturbing"*
 
 Objective: Update fleet strength only if the current value matches expected value
+
+SetUp
+
+```bash
+SET imperial_fleet:hoth:atat 7 EX 600
+```
+
+Response:
+> OK
+
+Now, after the Rogue Squadron took down 2 of them we need to update the value but verify if its the previous value (7), we don't want to misscount how many more AT-AT are still out there destroying power generators.
 
 Hint Commands: [`GET`](https://valkey.io/commands/get/), [`SET`](https://valkey.io/commands/set/) with conditions
 
@@ -32,6 +53,33 @@ Hint Commands: [`GET`](https://valkey.io/commands/get/), [`SET`](https://valkey.
 
 Objective: Set multiple fleet positions in a single atomic operation, instead of doing 3 separate commands to store or retrieve, how would you do it at once?
 
+Original:
+
+```bash
+SET imperial_fleet:tatooine "3 Star Destroyers, sector 7G" EX 300
+```
+
+Response:
+> OK
+
+Cache multiple systems 📋
+
+```bash
+SET imperial_fleet:hoth "1 Super Star Destroyer, 6 Star Destroyers" EX 600
+```
+
+Response:
+> OK
+
+Cache multiple systems 📋
+
+```bash
+SET imperial_fleet:endor "Shield generator station, 2 Star Destroyers" PX 300
+```
+
+Response:
+> OK
+
 Hint Commands: [`MSET`](https://valkey.io/commands/mset/), [`MGET`](https://valkey.io/commands/mget/)
 
 ## **Challenge 4: Conditional Caching**
@@ -40,10 +88,28 @@ Hint Commands: [`MSET`](https://valkey.io/commands/mset/), [`MGET`](https://valk
 
 Objective: Cache fleet data only if the key doesn't exist yet
 
+You can always do the following commands, but multiple Pilots might be reporting and overwriting the same information:
+
+Pilot Red Five reports 📋
+
+```bash
+SET imperial_fleet:endor "1 Super Star Destroyer, 6 Star Destroyers" EX 600
+```
+
+Response:
+> OK
+
+Pilot Rogue Two also reports 📋
+
+```bash
+SET imperial_fleet:endor "1 Super Star Destroyer, 6 Star Destroyers" EX 600
+```
+
+Response:
+> OK
+
+How can you prevent this?
+
 Hint Commands: [`SET`](https://valkey.io/commands/set/) with `NX` option, [`SETNX`](https://valkey.io/commands/setnx/)
 
----
-
-**Congratulations** young Padawan! You've helped win this battle, move onto the next mission; the clone wars wil continue for longer.
-
-## ➡️ Next: [Mission 2]()
+## ➡️ Next: [Mission 2️⃣: Cantina Session Management with Hashes](../docs/mission02.md)
