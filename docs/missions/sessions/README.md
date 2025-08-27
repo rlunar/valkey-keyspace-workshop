@@ -2,7 +2,7 @@
 
 ![Keyspace](../../../static/img/keyspace-backdrop.png)
 
-# Mission 2️⃣: Cantina Session Management with Hashes (12 minutes)
+# Mission 2️⃣: Cantina Session Management with Hashes (10 minutes)
 
 ## 🌟 What are Sessions?
 Sessions are like your cantina tab - keeping track of who you are, what you've ordered, and how much you owe. In web applications, sessions maintain user state across multiple requests, like remembering Han Solo still owes money for his drinks.
@@ -37,13 +37,13 @@ han_solo = {
     "credits": 10000,
     "table": "booth_7",
     "drinks_ordered": 2,
-    "last_activity": "2024-12-10T15:30:00"
+    "last_activity": "2025-08-28T13:30:00"
 }
 ```
 
 __1. Create comprehensive user session__
 ```bash
-HSET session:han_solo username "hsolo" species "human" credits 10000 table "booth_7" drinks_ordered "2" last_activity "2024-12-10T15:30:00"
+HSET session:han_solo username "hsolo" species "human" credits 10000 table "booth_7" drinks_ordered "2" last_activity "2025-08-28T13:30:00"
 ```
 
 We get a response to the number of field/value pairs that we have stored in our Valkey Hash.
@@ -77,7 +77,7 @@ Response:
 __4. Update credits after paying for drinks (partial update)__
 
 ```bash
-HSET session:han_solo credits 9500 last_activity "2024-12-10T15:45:00"
+HSET session:han_solo credits 9500 last_activity "2022-08-28T13:45:00"
 ```
 
 Response, no new fields were added to the Valkey Hash:
