@@ -2,7 +2,7 @@
 
 ![Keyspace](../../../static/img/keyspace-backdrop.png)
 
-# 1️⃣ Mission 1: Hyperdrive Caching with Valkey Strings (20 minutes)
+# Mission 1️⃣: Hyperdrive Caching with Valkey Strings (20 minutes)
 
 ![Millennium Falcon](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExOXEyYzA5MzhydjY3NWRybnNzd252YzFlc3VzZ3JkMjZqd3lhaWdjNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/SiEz6hxdcJuOf2n3TE/giphy.gif)
 

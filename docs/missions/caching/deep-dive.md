@@ -2,13 +2,13 @@
 
 ![Keyspace](../../../static/img/keyspace-backdrop.png)
 
-__1️⃣ Mission 1: Hyperdrive Caching with Strings__
+__Mission 1️⃣: Hyperdrive Caching with Strings__
 
 # 🛸 Common Caching Patterns Deep Dive
 
 Explore the different Caching mechanisms, pros, cons and caveats.
 
-### **1. Cache-Aside (Lazy Loading)**
+## **1. Cache-Aside (Lazy Loading)**
 
 *"R2-D2 only loads Death Star plans when Luke actually needs them"*
 
@@ -22,15 +22,27 @@ Explore the different Caching mechanisms, pros, cons and caveats.
 
 **Best for:** Read-heavy workloads ♻️, unpredictable access patterns
 
+__1. Check cache first__
+
 ```bash
-# Cache-aside pattern example
-# 1. Check cache first
 GET death_star_plans:weakness_analysis
+```
 
-# 2. Cache miss - fetch from "database" and cache result
+Response:
+> (nil)
+
+__2. Cache miss - fetch from "database" and cache result__
+
+```bash
 SET death_star_plans:weakness_analysis "Thermal exhaust port vulnerability confirmed" EX 3600
+```
 
-# 3. Subsequent reads hit cache
+Response:
+> OK
+
+__3. Subsequent reads hit cache__
+
+```bash
 GET death_star_plans:weakness_analysis
 ```
 
@@ -46,10 +58,12 @@ GET death_star_plans:weakness_analysis
 
 ---
 
-### **2. Write-Through**
+## **2. Write-Through**
+
 *"C-3PO updates both his memory banks and the central Rebel database simultaneously"*
 
 **How it works:**
+
 - Write to cache and database at the same time 🔄
 - Every write operation updates both stores 🔃
 - Reads always hit cache (if cache is available) 
@@ -59,14 +73,25 @@ GET death_star_plans:weakness_analysis
 
 **Best for:** Applications requiring data consistency, moderate write loads
 
-```bash
-# Write-through simulation (application would handle database write)
-# Update both cache and database in same operation
-SET rebel_base_location:hoth "Echo Base, coordinates 39.5991° N, 2.9238° E" EX 7200
+Write-through simulation (application would handle database write)
 
-# Reads are always fast and consistent
+__1. Update both cache and database in same operation__
+
+```bash
+SET rebel_base_location:hoth "Echo Base, coordinates 39.5991 N, 2.9238 E" EX 7200
+```
+
+Response:
+> OK
+
+__2. Reads are always fast and consistent__
+
+```bash
 GET rebel_base_location:hoth
 ```
+
+Response:
+> "Echo Base, coordinates 39.5991 N, 2.9238 E"
 
 **Pros:** ✅
 - Data consistency guaranteed
@@ -80,10 +105,12 @@ GET rebel_base_location:hoth
 
 ---
 
-### **3. Write-Behind (Write-Back)**
+## **3. Write-Behind (Write-Back)**
+
 *"Han Solo updates his pilot log in the Falcon's computer first, syncs with Rebel command later"*
 
 **How it works:**
+
 - Write to cache immediately
 - Database write happens asynchronously later
 - Fastest write performance
@@ -93,14 +120,25 @@ GET rebel_base_location:hoth
 
 **Best for:** Write-heavy applications, acceptable eventual consistency
 
-```bash
-# Write-behind pattern - immediate cache update
-SET pilot_log:han_solo "Completed Kessel Run in 12 parsecs" EX 1800
+__1. Write-behind pattern - immediate cache update__
 
-# Application separately handles async database write
-# Cache provides immediate read access
+```bash
+SET pilot_log:han_solo "Completed Kessel Run in 12 parsecs" EX 1800
+```
+
+Response:
+> OK
+
+Application separately handles async database write
+
+__2. Cache provides immediate read access__
+
+```bash
 GET pilot_log:han_solo
 ```
+
+Response:
+> "Completed Kessel Run in 12 parsecs"
 
 **Pros:** ✅
 - Fastest write performance
@@ -114,7 +152,7 @@ GET pilot_log:han_solo
 
 ---
 
-### Two hard problems in computer science: Naming things and Cache invalidation
+## Two hard problems in computer science: Naming things and Cache invalidation
 
 ![Cache-invalidation](../../../static/img/caching_05-consistency-issue.png)
 
@@ -122,7 +160,7 @@ When multiple application servers are concurrently using the distributed Cache m
 
 ---
 
-## Next: [Test your skills with challenges](../caching/challenge.md)
+## ➡️ Next: [Test your skills with challenges](../caching/challenge.md)
 
 Attributions:
 

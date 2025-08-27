@@ -2,7 +2,7 @@
 
 ![Keyspace](../../../static/img/keyspace-backdrop.png)
 
-__1️⃣ Mission 1: Hyperdrive Caching with Strings__
+__Mission 1️⃣: Hyperdrive Caching with Strings__
 
 # 🚀 Bonus Challenges
 
@@ -42,6 +42,6 @@ Hint Commands: [`SET`](https://valkey.io/commands/set/) with `NX` option, [`SETN
 
 **Congratulations** young Padawan! You've helped win this battle, move onto the next mission; the clone wars wil continue for longer.
 
-## Next [Mission 2]()
+## ➡️ Next: [Mission 2]()
 
-[Mission 1 Challenge Solutions](../caching/solution.md)
+[Mission 1️⃣ Challenge Solutions](../caching/solution.md)
