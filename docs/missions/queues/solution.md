@@ -47,6 +47,18 @@ Objective: Get queue statistics and find specific missions without removing them
 
 Hint Commands: [`LPOS`](https://valkey.io/commands/lpos/), [`LLEN`](https://valkey.io/commands/llen/) for queue size limits.
 
-## ➡️ Next: [Mission 4️⃣: Death Star Leaderboards with Sorted Sets](../leaderboards/README.md)
+```bash
+LLEN missions:standard
+```
 
-[Mission 3️⃣ Challenge Solutions](../queues/solution.md)
+Response:
+> (integer) 1
+
+```bash
+LLEN missions:urgent
+```
+
+Response:
+> (integer) 2
+
+## ➡️ Next: [Mission 4️⃣: Death Star Leaderboards with Sorted Sets](../leaderboards/README.md)

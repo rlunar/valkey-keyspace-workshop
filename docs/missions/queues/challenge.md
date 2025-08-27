@@ -12,9 +12,9 @@ __Mission 3️⃣: Galactic Task Queues with Lists__
 
 ![I am Groot](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExcGp0dXRncHZlM3Uwd3J6NTRjeXZuem1hdW11OTBuN2ttdzB3eDA2dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l4FGrYKtP0pBGpBAY/giphy.gif)
 
-Objective: Move a standard mission to urgent queue and insert at specific position from existing queues: `missions:standard` and `missions:urgent`.
+Objective: Move an item from `missions:standard` (rightmost) and insert it at the left side of `missions:urgent`.
 
-Hint Commands: [`LREM`](https://valkey.io/commands/lrem/), [`LINSERT`](https://valkey.io/commands/linsert/), [`LSET`](https://valkey.io/commands/lset/)
+Hint Commands: [`RPOPLPUSH`](https://valkey.io/commands/rpoplpush/)
 
 ## **Challenge 2: Mission Queue Monitoring**
 
