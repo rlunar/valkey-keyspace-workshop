@@ -112,4 +112,4 @@ How can you prevent this?
 
 Hint Commands: [`SET`](https://valkey.io/commands/set/) with `NX` option, [`SETNX`](https://valkey.io/commands/setnx/)
 
-## ➡️ Next: [Mission 2️⃣: Cantina Session Management with Hashes](../docs/mission02.md)
+## ➡️ Next: [Mission 2️⃣: Cantina Session Management with Hashes](../sessions/README.md)

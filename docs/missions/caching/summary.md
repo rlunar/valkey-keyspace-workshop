@@ -26,4 +26,4 @@ __Mission 1️⃣: Hyperdrive Caching with Strings__
 - Zero tolerance for cache misses
 - Can invest in complex cache management
 
-## ➡️ Next: [Mission 2️⃣: Cantina Session Management with Hashes](../docs/mission02.md)
+## ➡️ Next: [Mission 2️⃣: Cantina Session Management with Hashes](../sessions/README.md)
