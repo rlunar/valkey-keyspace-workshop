@@ -2,7 +2,7 @@
 
 ![Keyspace](../../../static/img/keyspace-backdrop.png)
 
-# Mission 1: Hyperdrive Caching with Valkey Strings (16 minutes)
+# 1️⃣ Mission 1: Hyperdrive Caching with Valkey Strings (20 minutes)
 
 ![Millennium Falcon](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExOXEyYzA5MzhydjY3NWRybnNzd252YzFlc3VzZ3JkMjZqd3lhaWdjNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/SiEz6hxdcJuOf2n3TE/giphy.gif)
 
@@ -115,7 +115,7 @@ If you get a response `(integer) -2` means the `TTL` has expired, note the `PX` 
 
 Beware of the duration of items in the Cache, sometimes you do want to evict them in less than a second, sometimes less than 1 minute, 1 hour or maybe exactly at midnight, for this you can specify TTL using the [EXPIRE](https://valkey.io/commands/expire/) or [EXPIREAT](https://valkey.io/commands/expireat/) command.
 
-## [Explore Common Caching Patterns](../caching/deep-dive.md)
+## ➡️ Next: [Explore Common Caching Patterns](../caching/deep-dive.md)
 
 Attributions:
 

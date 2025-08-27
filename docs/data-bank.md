@@ -3,7 +3,7 @@
 |Mission Briefing|1|1|
 |Training|2|3|
 |Missions|2|3|
-|Mission01|16|19|
+|Mission01|20|23|
 |Mission02|10|29|
 |Mission03|10|39|
 |Mission04|10|49|
