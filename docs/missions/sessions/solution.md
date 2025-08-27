@@ -132,5 +132,3 @@ Response:
 >
 
 ## ➡️ Next: [Mission 3️⃣: Galactic Task Queues with Lists](../queues/README.md)
-
-[Mission 2️⃣ Challenge Solutions](../sessions/solution.md)
