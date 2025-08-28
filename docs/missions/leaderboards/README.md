@@ -157,4 +157,4 @@ ZCOUNT pilot_leaderboard 90 100
 Response:
 > (integer) 3
 
-## ➡️ Next: [Test your skills with challenges](../leaderboards/README.md)
+## ➡️ Next: [Test your skills with challenges](../leaderboards/challenge.md)
