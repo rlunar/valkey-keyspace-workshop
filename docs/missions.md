@@ -13,6 +13,8 @@
 
 ---
 
+[Final Mission Debrief](../docs/debrief.md)
+
 *"May the Cache be with you, always."*
 
 **Questions? The Force is strong with our Q&A session!**
