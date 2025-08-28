@@ -83,7 +83,7 @@ Objective: Set multiple fleet positions in a single atomic operation, instead of
 Original:
 
 ```bash
-SET imperial_fleet:tatooine "3 Star Destroyers, sector 7G" EX 300
+SET imperial_fleet:tatooine "3 Star Destroyers, sector 7G"
 ```
 
 Response:
@@ -92,7 +92,7 @@ Response:
 Cache multiple systems 📋
 
 ```bash
-SET imperial_fleet:hoth "1 Super Star Destroyer, 6 Star Destroyers" EX 600
+SET imperial_fleet:hoth "1 Super Star Destroyer, 6 Star Destroyers"
 ```
 
 Response:
@@ -101,7 +101,7 @@ Response:
 Cache multiple systems 📋
 
 ```bash
-SET imperial_fleet:endor "Shield generator station, 2 Star Destroyers" PX 300
+SET imperial_fleet:endor "Shield generator station, 2 Star Destroyers"
 ```
 
 Response:
