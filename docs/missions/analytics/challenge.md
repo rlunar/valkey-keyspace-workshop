@@ -53,3 +53,8 @@ Hint Commands: [`ZUNIONSTORE`](https://valkey.io/commands/zunionstore/) to combi
 Objective: Set up threshold monitoring and automated alerts
 
 Hint Commands: [`EVAL`](https://valkey.io/commands/eval/) scripts that check thresholds and trigger actions, [`PUBLISH`](https://valkey.io/commands/publish/) for notifications
+
+
+---
+
+[Missions](../../missions.md) | [Final Mission Debrief](../../debrief.md)
