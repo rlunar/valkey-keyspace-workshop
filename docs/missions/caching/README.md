@@ -108,7 +108,7 @@ What happened with Endor's data? Why did we get (nil)?
 
 Let's check the TTL 
 ```bash
-TTL imperial_fleet:tatooine
+TTL imperial_fleet:endor
 ```
 
 Response:
