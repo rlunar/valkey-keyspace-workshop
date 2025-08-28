@@ -15,14 +15,14 @@
 
 ---
 
-## Mission Briefing (1 minute)
+## Mission Briefing
 
 *"Space: the final frontier. These are the voyages of the starship Valkey..."*
 
 Welcome to the Keyspace Mission Control! Today we'll explore six essential Valkey use cases that will give your applications the power of a thousand suns. Whether you're building the next USS Enterprise or protecting the galaxy like the Guardians, Valkey has the data structures you need.
 
 **Our Mission Objectives:**
-- 🚀 Master 6 mission-critical Valkey patterns
+- 🚀 Learn 5 mission-critical Valkey patterns
 - 🌌 Understand real world examples faster than the Millennium Falcon's Kessel Run
 - ⭐ Prepare to build applications that scale across the galaxy
 

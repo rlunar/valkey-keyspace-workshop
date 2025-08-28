@@ -76,6 +76,6 @@ ZADD pilot_leaderboard 12.3 "Stormtrooper_TK421" 15.7 "Stormtrooper_TK422" 94.2 
 
 Hint Commands: [`ZPOPMIN`](https://valkey.io/commands/zpopmin/), [`ZPOPMAX`](https://valkey.io/commands/zpopmax/)
 
-## ➡️ Next: [Mission 5️⃣: Hyperdrive Rate Limiters with Lua Scripts](../rate-limiters/README.md)
+## ➡️ Next: [Mission 5️⃣: Real-time Battle Analytics](../analytics/README.md)
 
 [Mission 4️⃣ Challenge Solutions](../leaderboards/solution.md)
