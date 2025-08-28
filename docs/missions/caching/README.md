@@ -104,6 +104,8 @@ Response:
 
 What happened with Endor's data? Why did we get (nil)?
 
+![Obi-Wan-What](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExb3V0M3J3NXBrMmZ5anlreHd3cnc4ZGMxbDk2dDc5N3BsbzQ5OGd2cyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l1KsAVIlhsWoZC0Zq/giphy.gif)
+
 Let's check the TTL 
 ```bash
 TTL imperial_fleet:tatooine
